@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".lab_test">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_grad_design_11"
+        tools:ignore="UselessParent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:ignore="ScrollViewSize">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/logo_name"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:orientation="horizontal">
+                <androidx.cardview.widget.CardView
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_gravity="center_vertical"
+                    app:cardCornerRadius="100dp"
+                    app:cardElevation="8dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+
+
+
+                        <ImageView
+                            android:id="@+id/User_Profile_Image"
+                            android:layout_width="115dp"
+                            android:layout_height="115dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/admin"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_marginHorizontal="10dp"
+                    app:cardCornerRadius="15dp"
+                    android:layout_gravity="center_vertical"
+                    app:cardElevation="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:background="@drawable/bg_grad_design"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:autoSizeMinTextSize="18sp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/User_Name_profile_TextView"
+                            android:layout_marginTop="10dp"
+                            android:textColor="@color/black"
+                            android:layout_marginBottom="10dp"
+                            android:layout_gravity="center_horizontal"
+                            android:textStyle="bold"
+                            android:textAllCaps="true"
+                            tools:targetApi="o" />
+
+                        <TextView
+                            android:id="@+id/Subscription_Status_Type"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:text="***Family Member***"
+                            android:textColor="@color/purple_700"
+                            android:layout_gravity="center_horizontal"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                         />
+
+                        <Button
+                            android:id="@+id/Edit_Profile_Button_profile"
+                            style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:layout_gravity="center_horizontal"
+                            android:text="Edit Profile"
+                            android:background="@drawable/custom_button_2"
+                            app:strokeColor="#FFFFFF" />
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/yourAccount"
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="15dp"
+                android:layout_height="40dp"
+                app:cardCornerRadius="30dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_marginTop="15dp"
+                app:cardElevation="10dp"
+                app:cardBackgroundColor="#94FDEB"
+                android:layout_gravity="center_horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@drawable/custom_button_2"
+                    android:gravity="center"
+                    android:text="Your Account"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    tools:ignore="UsingOnClickInXml" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/Select_Language_Button_Profile"
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="15dp"
+                android:layout_height="40dp"
+                app:cardCornerRadius="15dp"
+                android:layout_marginTop="15dp"
+                app:cardElevation="10dp"
+                app:cardBackgroundColor="#94FDEB"
+                android:layout_gravity="center_horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@drawable/custom_button_2"
+                    android:text="Select Language"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/Saved_Medicines_Button_Profile"
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="15dp"
+                android:layout_height="40dp"
+                app:cardCornerRadius="15dp"
+                android:layout_marginTop="15dp"
+                app:cardElevation="10dp"
+                app:cardBackgroundColor="#94FDEB"
+                android:layout_gravity="center_horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@drawable/custom_button_2"
+                    android:text="Saved Medicines"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/Your_Orders_Profile"
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="15dp"
+                android:layout_height="40dp"
+                app:cardCornerRadius="15dp"
+                android:layout_marginTop="15dp"
+                app:cardElevation="10dp"
+                app:cardBackgroundColor="#94FDEB"
+                android:layout_gravity="center_horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@drawable/custom_button_2"
+                    android:text="Your orders"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/Your_Cart_Profile"
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="15dp"
+                android:layout_height="40dp"
+                app:cardCornerRadius="15dp"
+                android:layout_marginTop="15dp"
+                app:cardElevation="10dp"
+                app:cardBackgroundColor="#94FDEB"
+                android:layout_gravity="center_horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@drawable/custom_button_2"
+                    android:text="Your Cart"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/Notifications_Profile"
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="15dp"
+                android:layout_height="40dp"
+                app:cardCornerRadius="15dp"
+                android:layout_marginTop="15dp"
+                app:cardElevation="10dp"
+                app:cardBackgroundColor="#94FDEB"
+                android:layout_gravity="center_horizontal"
+                tools:ignore="InvalidId">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@drawable/custom_button_2"
+                    android:text="Notifications"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/Doctors_Appointment_orders_Profile"
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="15dp"
+                android:layout_height="40dp"
+                app:cardCornerRadius="15dp"
+                android:layout_marginTop="15dp"
+                app:cardElevation="10dp"
+                android:layout_marginBottom="75dp"
+                app:cardBackgroundColor="#94FDEB"
+                android:layout_gravity="center_horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@drawable/custom_button_2"
+                    android:text="Your Doctor's Appointments"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+            </androidx.cardview.widget.CardView>
+
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>

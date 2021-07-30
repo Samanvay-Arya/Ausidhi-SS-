@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/Drawer_Home"
+            android:icon="@drawable/ic_baseline_home_24"
+            android:title="@string/home" />
+        <item
+            android:id="@+id/Drawer_Profile"
+            android:icon="@drawable/ic_baseline_account_circle_24"
+            android:title="@string/profile" />
+        <item
+            android:id="@+id/Drawer_Doctor"
+            android:icon="@drawable/ic_doctor_svg"
+            android:title="@string/doctor_consultancy" />
+        <item
+            android:id="@+id/Drawer_lab_test"
+            android:icon="@drawable/ic_blood_test"
+            android:title="@string/lab_test" />
+        <item
+            android:id="@+id/Drawer_store"
+            android:icon="@drawable/ic_baseline_store_24"
+            android:title="@string/medical_store" />
+
+    </group>
+    <group android:checkableBehavior="single">
+        <item android:title="Profile Action">
+            <menu>
+                <item
+                    android:id="@+id/Drawer_login_again"
+                    android:icon="@drawable/ic_baseline_login_24"
+                    android:title="login" />
+                <item
+                    android:id="@+id/Drawer_logout"
+                    android:icon="@drawable/ic_baseline_logout_24"
+                    android:title="logout" />
+
+            </menu>
+        </item>
+    </group>
+    <item
+        android:id="@+id/Drawer_share_app"
+        android:icon="@drawable/ic_baseline_share_24"
+        android:title="share us" />
+    <item android:title="Contact Us">
+        <menu>
+            <item
+                android:id="@+id/Drawer_Call_us"
+                android:icon="@drawable/ic_baseline_local_phone_24"
+                android:title="Call Us" />
+            <item
+                android:id="@+id/Drawer_Chat_with_us"
+                android:icon="@drawable/ic_baseline_question_answer_24"
+                android:title="Chat with Us" />
+        </menu>
+    </item>
+</menu>

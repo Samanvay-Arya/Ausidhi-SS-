@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "388503890538",
+    "firebase_url": "https://pshop-d1b0b-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "pshop-d1b0b",
+    "storage_bucket": "pshop-d1b0b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:388503890538:android:f5043a740bf562ff553813",
+        "android_client_info": {
+          "package_name": "com.example.docsapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "388503890538-2gqbv04nrcllqlmj48ui09p33hd8rejp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDRhdbe5764_nEquN5Wx_0JxtVNIEnmFGg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "388503890538-2gqbv04nrcllqlmj48ui09p33hd8rejp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

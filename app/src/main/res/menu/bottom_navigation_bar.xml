@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/Home"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:title="@string/home" />
+    <item
+
+        android:id="@+id/store"
+        android:icon="@drawable/ic_baseline_store_24"
+        android:title="@string/medical_store"/>
+    <item
+        android:id="@+id/lab_test"
+        android:icon="@drawable/ic_blood_test"
+        android:title="@string/lab_test"
+        tools:ignore="HardcodedText" />
+
+    <item
+        android:id="@+id/Doctor"
+        android:icon="@drawable/ic_doctor_svg"
+        android:title="Doctor"
+        tools:ignore="HardcodedText" />
+    <item
+        android:id="@+id/Profile"
+        android:icon="@drawable/ic_baseline_account_circle_24"
+        android:title="@string/profile"/>
+
+</menu>

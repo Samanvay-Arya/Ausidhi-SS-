@@ -1,0 +1,64 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Ausidhi</string>
+    <string name="hello_world_i_am_samanvay_arya">Hello world I am Samanvay Arya</string>
+
+    <string name="search_for_medicines_and_products">Search for medicines and products</string>
+    <string name="slider_images">slider images</string>
+    <string name="call_for_orders">Call for orders</string>
+    <string name="this_is_the_top_bar_for_the_application">this is the top bar for the application</string>
+    <string name="search_for_medicines_and_product">Search for medicines and product</string>
+    <string name="todo" tools:ignore="DuplicateDefinition">TODO</string>
+    <string name="notification_bell">Notification bell</string>
+    <string name="budhana">Budhana</string>
+    <string name="offers_for_you">Offers for you</string>
+    <string name="ask_a_query">Ask a Query</string>
+    <string name="explore_more">Explore More</string>
+    <string name="trending">Trending</string>
+    <string name="search_by_categories">Search By Categories</string>
+    <string name="pain">Pain</string>
+    <string name="individual_s_corner">Individual\'s Corner</string>
+    <string name="pet_s_care">Pet\'s Care</string>
+    <string name="women_s_personals">Women\'s Personals</string>
+    <string name="men_s_personals">men\'s Personals</string>
+    <string name="baby_s_care">Baby\'s Care</string>
+    <string name="gadget_s_world">Gadget\'s World</string>
+    <string name="health_monitoring">Health Monitoring</string>
+    <string name="hair_removers">Hair Removers</string>
+    <string name="surgical_care">Surgical Care</string>
+    <string name="breathe_suporters">Breathe Suporters</string>
+    <string name="brands">Brands</string>
+    <string name="dabur">Dabur</string>
+    <string name="muscle_science">Muscle Science</string>
+    <string name="cipla">Cipla</string>
+    <string name="mankind">Mankind</string>
+    <string name="migraine">Migraine</string>
+    <string name="cancer">Cancer</string>
+    <string name="skin_rashes">Skin Rashes</string>
+    <string name="diabetes">Diabetes</string>
+    <string name="medical_store">Store</string>
+    <string name="add_prescription">Add Prescription</string>
+    <string name="textview">TextView</string>
+    <string name="profile">Profile</string>
+    <string name="home">Home</string>
+    <string name="lab_test">Lab Test</string>
+    <string name="this_is_the_location_button_at_the_top_of_the_app_it_is_in_top_bar">this is the location button at the top of the app / it is in Top Bar</string>
+    <string name="orders_list_will_contain_all_order_history_of_user">Orders List will contain all order history of user</string>
+    <string name="cart_will_contain_all_orders_user_wants_to_do_in_future">Cart will contain all orders user wants to do in future</string>
+    <string name="top_search_will_search_across_the_whole_application">Top search will search across the whole Application</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="doctor_consultancy">Doctor consultancy</string>
+    <string name="navigation_open">Open Navigation Drawer</string>
+    <string name="navigation_close">Close Navigation Drawer</string>
+    <string name="share">Share</string>
+    <string name="orders">Orders</string>
+    <string name="cart">cart</string>
+    <string name="notifications">Notifications</string>
+    <string name="stores_near_you">Stores Near you</string>
+    <string name="ratings">Ratings</string>
+    <string name="_4_7_5">4.7/5</string>
+
+
+
+
+</resources>
