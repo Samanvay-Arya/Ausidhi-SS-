@@ -10,6 +10,7 @@
         android:id="@+id/orders_RecyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="#FAF3E3"
         tools:layout_editor_absoluteX="171dp"
         tools:layout_editor_absoluteY="270dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

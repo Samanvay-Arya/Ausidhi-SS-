@@ -3,15 +3,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="220dp">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_marginHorizontal="10dp"
         android:layout_height="200dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginVertical="10dp"
         app:cardCornerRadius="10dp"
-        app:cardElevation="30dp"
+        app:cardElevation="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -19,7 +19,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:background="@drawable/bg_grad_design_3"
+            android:background="@color/white"
             android:orientation="vertical"
             android:layout_height="match_parent">
             <LinearLayout
