@@ -11,6 +11,8 @@ import android.os.Bundle;
 import android.view.animation.AnimationUtils;
 import android.view.animation.LayoutAnimationController;
 
+import com.bumptech.glide.Glide;
+
 import java.util.ArrayList;
 import java.util.Objects;
 

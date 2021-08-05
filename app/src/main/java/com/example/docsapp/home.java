@@ -57,7 +57,7 @@ import static android.app.Activity.RESULT_OK;
 public class home extends Fragment {
     private static final int REQUEST_IMAGE_CAPTURE =1 ;
     public SliderView top_sliderView;
-    Button call_for_orders;
+    Button call_for_orders,SearchUniversal;
     Button AskQuerry;
     ImageButton camera_prescription;
     Button AddPrescription;
@@ -82,7 +82,6 @@ public class home extends Fragment {
     TextView Learn_Disease_2;
     TextView Learn_Disease_3;
     TextView Learn_Disease_4;
-
     TextView GadgetsExploreMore;
     TextView ExploreMoreSearchCategory;
     FirebaseDatabase database = FirebaseDatabase.getInstance();
@@ -125,6 +124,7 @@ public class home extends Fragment {
         Learn_Disease_2 = v.findViewById(R.id.Learn_Disease_2);
         Learn_Disease_3 = v.findViewById(R.id.Learn_Disease_3);
         Learn_Disease_4 = v.findViewById(R.id.Learn_Disease_4);
+        SearchUniversal=v.findViewById(R.id.Universal_Search_Home);
 
         SliderAdapter sliderAdapter = new SliderAdapter(topSliderImages);
         top_sliderView.setSliderAdapter(sliderAdapter);
@@ -134,6 +134,13 @@ public class home extends Fragment {
         ExploreMoreSearchCategory = v.findViewById(R.id.ExploreMoreSearchCategory);
         GadgetsExploreMore = v.findViewById(R.id.GadgetsExploreMore);
 
+        SearchUniversal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getActivity(),AllProductUniversal.class);
+                startActivity(intent);
+            }
+        });
         GadgetsExploreMore.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

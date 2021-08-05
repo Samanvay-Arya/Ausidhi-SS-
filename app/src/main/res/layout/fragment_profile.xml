@@ -9,7 +9,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#ACE087"
+        android:background="#BEEC9D"
         tools:ignore="UselessParent">
 
         <LinearLayout
@@ -74,10 +74,12 @@
 
                         <TextView
                             android:layout_width="wrap_content"
-                            android:autoSizeMinTextSize="18sp"
                             android:layout_height="wrap_content"
                             android:id="@+id/User_Name_profile_TextView"
                             android:layout_marginTop="10dp"
+                            app:autoSizeTextType="uniform"
+                            app:autoSizeMaxTextSize="18sp"
+                            app:autoSizeMinTextSize="2sp"
                             android:textColor="@color/black"
                             android:layout_marginBottom="10dp"
                             android:layout_gravity="center_horizontal"
@@ -91,6 +93,9 @@
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="10dp"
                             android:text="***Family Member***"
+                            app:autoSizeTextType="uniform"
+                            app:autoSizeMaxTextSize="15sp"
+                            app:autoSizeMinTextSize="2sp"
                             android:textColor="@color/purple_700"
                             android:layout_gravity="center_horizontal"
                             android:textSize="15sp"
@@ -105,6 +110,9 @@
                             android:layout_marginBottom="10dp"
                             android:layout_gravity="center_horizontal"
                             android:text="Edit Profile"
+                            app:autoSizeTextType="uniform"
+                            app:autoSizeMaxTextSize="15sp"
+                            app:autoSizeMinTextSize="5sp"
                             android:background="@drawable/custom_button_2"
                             app:strokeColor="#FFFFFF" />
                     </LinearLayout>
@@ -119,7 +127,7 @@
                 android:id="@+id/yourAccount"
                 android:layout_width="match_parent"
                 android:layout_marginHorizontal="15dp"
-                android:layout_height="40dp"
+                android:layout_height="50dp"
                 app:cardCornerRadius="30dp"
                 android:clickable="true"
                 android:focusable="true"
@@ -135,17 +143,20 @@
                     android:background="@drawable/custom_button_2"
                     android:gravity="center"
                     android:text="Your Account"
+                    app:autoSizeTextType="uniform"
+                    app:autoSizeMaxTextSize="18sp"
+                    app:autoSizeMinTextSize="2sp"
                     android:textColor="@color/black"
-                    android:textSize="15sp"
                     android:textStyle="bold"
-                    tools:ignore="UsingOnClickInXml" />
+                    tools:ignore="UsingOnClickInXml"
+                    tools:targetApi="o" />
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/Select_Language_Button_Profile"
                 android:layout_width="match_parent"
                 android:layout_marginHorizontal="15dp"
-                android:layout_height="40dp"
+                android:layout_height="50dp"
                 app:cardCornerRadius="15dp"
                 android:layout_marginTop="15dp"
                 app:cardElevation="10dp"
@@ -158,17 +169,20 @@
                     android:layout_gravity="center"
                     android:background="@drawable/custom_button_2"
                     android:text="Select Language"
+                    app:autoSizeTextType="uniform"
+                    app:autoSizeMaxTextSize="18sp"
+                    app:autoSizeMinTextSize="2sp"
                     android:gravity="center"
                     android:textColor="@color/black"
-                    android:textSize="15sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    tools:targetApi="o" />
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/Saved_Medicines_Button_Profile"
                 android:layout_width="match_parent"
                 android:layout_marginHorizontal="15dp"
-                android:layout_height="40dp"
+                android:layout_height="50dp"
                 app:cardCornerRadius="15dp"
                 android:layout_marginTop="15dp"
                 app:cardElevation="10dp"
@@ -181,10 +195,13 @@
                     android:layout_gravity="center"
                     android:background="@drawable/custom_button_2"
                     android:text="Saved Medicines"
+                    app:autoSizeTextType="uniform"
+                    app:autoSizeMaxTextSize="18sp"
+                    app:autoSizeMinTextSize="2sp"
                     android:gravity="center"
                     android:textColor="@color/black"
-                    android:textSize="15sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    tools:targetApi="o" />
             </androidx.cardview.widget.CardView>
 
 
@@ -192,7 +209,7 @@
                 android:id="@+id/Your_Orders_Profile"
                 android:layout_width="match_parent"
                 android:layout_marginHorizontal="15dp"
-                android:layout_height="40dp"
+                android:layout_height="50dp"
                 app:cardCornerRadius="15dp"
                 android:layout_marginTop="15dp"
                 app:cardElevation="10dp"
@@ -205,16 +222,20 @@
                     android:layout_gravity="center"
                     android:background="@drawable/custom_button_2"
                     android:text="Your orders"
+                    app:autoSizeTextType="uniform"
+                    app:autoSizeMaxTextSize="18sp"
+                    app:autoSizeMinTextSize="2sp"
                     android:gravity="center"
                     android:textColor="@color/black"
                     android:textSize="15sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    tools:targetApi="o" />
             </androidx.cardview.widget.CardView>
             <androidx.cardview.widget.CardView
                 android:id="@+id/Your_Cart_Profile"
                 android:layout_width="match_parent"
                 android:layout_marginHorizontal="15dp"
-                android:layout_height="40dp"
+                android:layout_height="50dp"
                 app:cardCornerRadius="15dp"
                 android:layout_marginTop="15dp"
                 app:cardElevation="10dp"
@@ -227,16 +248,20 @@
                     android:layout_gravity="center"
                     android:background="@drawable/custom_button_2"
                     android:text="Your Cart"
+                    app:autoSizeTextType="uniform"
+                    app:autoSizeMaxTextSize="18sp"
+                    app:autoSizeMinTextSize="2sp"
                     android:gravity="center"
                     android:textColor="@color/black"
                     android:textSize="15sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    tools:targetApi="o" />
             </androidx.cardview.widget.CardView>
             <androidx.cardview.widget.CardView
                 android:id="@+id/Notifications_Profile"
                 android:layout_width="match_parent"
                 android:layout_marginHorizontal="15dp"
-                android:layout_height="40dp"
+                android:layout_height="50dp"
                 app:cardCornerRadius="15dp"
                 android:layout_marginTop="15dp"
                 app:cardElevation="10dp"
@@ -251,15 +276,19 @@
                     android:background="@drawable/custom_button_2"
                     android:text="Notifications"
                     android:gravity="center"
+                    app:autoSizeTextType="uniform"
+                    app:autoSizeMaxTextSize="18sp"
+                    app:autoSizeMinTextSize="2sp"
                     android:textColor="@color/black"
                     android:textSize="15sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    tools:targetApi="o" />
             </androidx.cardview.widget.CardView>
             <androidx.cardview.widget.CardView
                 android:id="@+id/Doctors_Appointment_orders_Profile"
                 android:layout_width="match_parent"
                 android:layout_marginHorizontal="15dp"
-                android:layout_height="40dp"
+                android:layout_height="50dp"
                 app:cardCornerRadius="15dp"
                 android:layout_marginTop="15dp"
                 app:cardElevation="10dp"
@@ -274,9 +303,13 @@
                     android:background="@drawable/custom_button_2"
                     android:text="Your Doctor's Appointments"
                     android:gravity="center"
+                    app:autoSizeTextType="uniform"
+                    app:autoSizeMaxTextSize="18sp"
+                    app:autoSizeMinTextSize="2sp"
                     android:textColor="@color/black"
                     android:textSize="15sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    tools:targetApi="o" />
             </androidx.cardview.widget.CardView>
 
 

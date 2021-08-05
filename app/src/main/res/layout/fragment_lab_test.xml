@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginBottom="50dp"
+    android:layout_marginBottom="45dp"
     tools:context=".lab_test">
     <LinearLayout
         android:layout_width="match_parent"
@@ -36,13 +36,13 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="50dp"
-        android:background="@color/white"
-        android:orientation="vertical">
+        android:background="#BEEC9D">
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:src="@drawable/ic_blood_test"
+            android:alpha="0.8"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
@@ -54,7 +54,8 @@
             android:id="@+id/lab_test_recyclerView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:alpha="0.88"
+            android:alpha="0.95"
+            android:paddingBottom="10dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"

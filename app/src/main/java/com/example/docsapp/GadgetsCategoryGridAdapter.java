@@ -10,43 +10,63 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.bumptech.glide.Glide;
+import com.firebase.ui.database.FirebaseRecyclerAdapter;
+import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.firebase.database.DataSnapshot;
+
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 
-public class GadgetsCategoryGridAdapter extends BaseAdapter {
-    Context context;
-    ArrayList<String> GadgetsCategoryNameList;
-    ArrayList<Integer> GadgetsCategoryImageList;
+public class GadgetsCategoryGridAdapter extends FirebaseRecyclerAdapter<GadgetsCategoryModel,GadgetsCategoryGridAdapter.viewHolder> {
 
-    public GadgetsCategoryGridAdapter(Context context, ArrayList<String> GadgetsCategoryNameList, ArrayList<Integer> GadgetsCategoryImageList) {
-        this.context = context;
-        this.GadgetsCategoryNameList = GadgetsCategoryNameList;
-        this.GadgetsCategoryImageList = GadgetsCategoryImageList;
+
+    private GadgetsCategoryGridAdapter.OnItemClickListener listener;
+    public GadgetsCategoryGridAdapter(@NonNull FirebaseRecyclerOptions<GadgetsCategoryModel> options) {
+        super(options);
     }
 
     @Override
-    public int getCount() {
-        return GadgetsCategoryImageList.size();
+    protected void onBindViewHolder(@NonNull viewHolder holder, int position, @NonNull GadgetsCategoryModel model) {
+        holder.Name.setText(model.getName());
+        Glide.with(holder.Image.getContext()).load(model.getImage()).into(holder.Image);
+
     }
 
+    @NonNull
     @Override
-    public Object getItem(int position) {
-        return null;
+    public viewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.gadgets_category_card_design, parent, false);
+        return new viewHolder(view);
     }
 
-    @Override
-    public long getItemId(int position) {
-        return 0;
-    }
+    public class viewHolder extends RecyclerView.ViewHolder {
+        TextView Name;
+        ImageView Image;
+        public viewHolder(@NonNull View itemView) {
+            super(itemView);
+            Name=itemView.findViewById(R.id.GadgetsCategoryName);
+            Image=itemView.findViewById(R.id.GadgetsCategoryImage);
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    int position = getAdapterPosition();
+                    if (position!=RecyclerView.NO_POSITION && listener!=null){
+                        listener.onItemClick(getSnapshots().getSnapshot(position),position);
 
-    @SuppressLint("ResourceType")
-    @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
-        @SuppressLint("ViewHolder") View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.gadgets_category_card_design,parent,false);
-        ImageView GadgetsCategoryImage=view.findViewById(R.id.GadgetsCategoryImage);
-        TextView GadgetsCategoryName=view.findViewById(R.id.GadgetsCategoryName);
-        GadgetsCategoryImage.setImageResource(GadgetsCategoryImageList.get(position));
-        GadgetsCategoryName.setText(GadgetsCategoryNameList.get(position));
-        return view;
+                    }
+                }
+            });
+        }
+    }
+    public interface OnItemClickListener{
+        void onItemClick(DataSnapshot dataSnapshot, int position);
+    }
+    public void setOnItemCLickListener(GadgetsCategoryGridAdapter.OnItemClickListener listener){
+        this.listener= listener;
+
     }
 }

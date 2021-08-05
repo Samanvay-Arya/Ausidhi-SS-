@@ -3,12 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
-    android:layout_height="290dp">
+    android:layout_height="280dp">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="280dp"
-        app:cardCornerRadius="10dp"
+        app:cardCornerRadius="5dp"
         app:cardElevation="10dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -16,7 +16,7 @@
             android:layout_height="280dp">
 
             <TextView
-                android:id="@+id/GadgetName"
+                android:id="@+id/AllProductUniversal_Product_Name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="start"
@@ -25,95 +25,149 @@
                 android:layout_marginBottom="60dp"
                 android:text="Pulse oxemeter"
                 android:textColor="#F1060E"
-                android:textSize="15sp"
                 android:textStyle="bold"
+                app:autoSizeMaxTextSize="15sp"
+                app:autoSizeMinTextSize="5sp"
+                app:autoSizeTextType="uniform"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
 
             <ImageView
-                android:id="@+id/imageView4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="115dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginBottom="3dp"
-                android:src="@drawable/ic_baseline_star_rate_24"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.789" />
-
-            <ImageView
-                android:id="@+id/gadget_tower"
+                android:id="@+id/AllProductUniversal_Product_Image"
                 android:layout_width="200dp"
                 android:layout_height="200dp"
                 android:background="@color/white"
-                android:src="@drawable/oxemeter"
+                android:padding="10dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/gadget_rating"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="115dp"
-                android:layout_marginEnd="3dp"
-                android:layout_marginRight="3dp"
-                android:text="4.8/5"
-                android:textColor="@color/black"
-                android:textStyle="bold"
+            <androidx.cardview.widget.CardView
+                android:layout_width="30dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="80dp"
+                android:layout_marginLeft="80dp"
+                android:layout_marginBottom="10dp"
+                app:cardCornerRadius="2dp"
+                app:cardElevation="5dp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/imageView4"
-                app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toEndOf="@+id/GadgetName"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.773" />
+                app:layout_constraintStart_toStartOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#F46E23"
+                    android:orientation="vertical"
+                    android:weightSum="2">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.8"
+                        android:src="@drawable/ic_baseline_star_rate_24" />
+
+                    <TextView
+                        android:id="@+id/AllProductUniversal_Product_Star_Rating"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1.2"
+                        app:autoSizeTextType="uniform"
+                        app:autoSizeMaxTextSize="12sp"
+                        app:autoSizeMinTextSize="3sp"
+                        android:gravity="center"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
 
             <TextView
-                android:id="@+id/gadget_selling_price"
+                android:id="@+id/AllProductUniversal_Product_Price"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginLeft="16dp"
-                android:layout_marginTop="4dp"
+                android:layout_marginBottom="28dp"
                 android:text="1234/-"
                 android:textColor="@color/purple_700"
                 android:textSize="18sp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toStartOf="@+id/Notification_Heading"
-                app:layout_constraintHorizontal_bias="0.214"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/GadgetName" />
-
-            <TextView
-                android:id="@+id/discount_percentage"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="35% OFF"
-                android:textColor="#3CA105"
-                android:textSize="12sp"
+                app:autoSizeMaxTextSize="15sp"
+                app:autoSizeMinTextSize="5sp"
+                app:autoSizeTextType="uniform"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/GadgetName"
-                app:layout_constraintVertical_bias="0.636" />
+                app:layout_constraintStart_toStartOf="parent" />
 
             <TextView
-                android:id="@+id/MRP_price"
+                android:id="@+id/AllProductUniversal_Product_MRP"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginLeft="18dp"
-                android:layout_marginEnd="140dp"
-                android:layout_marginRight="140dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginBottom="12dp"
                 android:text="1800/-"
                 android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/gadget_selling_price" />
+                app:autoSizeMaxTextSize="15sp"
+                app:autoSizeMinTextSize="5sp"
+                app:autoSizeTextType="uniform"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <View
+                android:id="@+id/divider3"
+                android:layout_width="50dp"
+                android:layout_height="1.5dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginBottom="19dp"
+                android:background="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="125dp"
+                android:layout_marginLeft="125dp"
+                android:layout_marginBottom="10dp"
+                app:cardCornerRadius="70dp"
+                app:cardElevation="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#F4C300"
+                    android:orientation="vertical"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/AllProductUniversal_Product_Discount"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1.2"
+                        android:autoSizeTextType="uniform"
+                        android:gravity="center"
+                        android:padding="3dp"
+                        android:text="40%"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.8"
+                        android:gravity="center_horizontal"
+                        android:text="OFF"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        app:autoSizeMaxTextSize="10sp"
+                        app:autoSizeMinTextSize="2sp"
+                        app:autoSizeTextType="uniform" />
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 </LinearLayout>

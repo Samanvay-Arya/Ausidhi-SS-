@@ -42,8 +42,6 @@ public class lab_test extends Fragment {
    public RecyclerView RecyclerView;
    public Lab_test_recycler_Adapter Adapter;
 
-    public ArrayList<String>LabTestNameList=new ArrayList<>();
-
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -60,7 +58,6 @@ public class lab_test extends Fragment {
             @Override
             public void onItemClick(DataSnapshot dataSnapshot, int position) {
                 String key= dataSnapshot.getKey();
-
                 Intent intent= new Intent(getContext(),OrderForLabTest.class);
                 intent.putExtra("Key",key);
                 startActivity(intent);
