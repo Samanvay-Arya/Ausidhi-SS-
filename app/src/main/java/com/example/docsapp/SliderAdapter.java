@@ -36,7 +36,6 @@ public class SliderAdapter extends SliderViewAdapter<SliderAdapter.Holder>{
         public Holder(View itemView){
             super(itemView);
             imageView=itemView.findViewById(R.id.image_slider_top);
-
         }
 
     }

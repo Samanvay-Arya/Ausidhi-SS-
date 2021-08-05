@@ -7,9 +7,12 @@
     android:background="@color/white"
     tools:context=".gadgets_first_page">
 
-    <GridView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:numColumns="2"
-        android:id="@+id/GridViewGadgetsCategory"/>
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:background="#FAF3E3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/GridViewGadgetsCategory"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

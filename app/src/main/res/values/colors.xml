@@ -9,4 +9,22 @@
     <color name="white">#FFFFFFFF</color>
     <color name="top_bar">#A2A2A3</color>
     <color name="Black2">#403E3E</color>
+    <color name="water"> #CAF4F4</color>
+    <color name="Ivory"> #FCFFE9</color>
+    <color name="Blanched_Almond">#FFF2CC</color>
+    <color name="Tea_Green">#CAEFD1</color>
+    <color name="Pale_Pink">#FDE0D9</color>
+    <color name="X11_Gray">#C1BDB7</color>
+    <color name="Almond">#EFDDCA</color>
+    <color name="Pale_Aquamarine">#9DF6E7</color>
+    <color name="Pale_Violet">#D19CFF</color>
+    <color name="Shampoo">#FFC6FA</color>
+    <color name="Fawn">#DBA974</color>
+    <color name="Crayolas_Gold">#E3C08B</color>
+    <color name="Dutch_White">#F1D9B7</color>
+    <color name="Lemon_Meringue">#F6E5C4</color>
+    <color name="Blue_Green">#01493D</color>
+    <color name="Android_Green">#95BE47</color>
+    <color name="Mustard">#FBD952</color>
+    <color name="Raw_Sienna">#DA814F</color>
 </resources>

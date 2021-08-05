@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="autoSizeTextView">
+        <item>10sp</item>
+        <item>15sp</item>
+        <item>10sp</item>
+    </array>
+</resources>

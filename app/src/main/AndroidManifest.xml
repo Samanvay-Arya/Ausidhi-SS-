@@ -3,8 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.docsapp">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
-
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission
         android:name="android.permission.CALL_PHONE"
         android:required="true" />
@@ -34,7 +33,6 @@
     </queries>
 
     <application
-
         android:allowBackup="true"
         android:icon="@drawable/ic_logo_full"
         android:label="@string/app_name"
@@ -42,7 +40,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DocsApp"
         tools:ignore="ExtraText">
-        <activity android:name=".OrderForLabTest"></activity>
+        <activity android:name=".AllProductUniversal"></activity>
+        <activity android:name=".IndividualProductUniversal" />
+        <activity android:name=".OrderForLabTest" />
         <activity android:name=".Individual_Notification" />
         <activity android:name=".YourAccount" />
         <activity android:name=".LoginWithEmail" />
