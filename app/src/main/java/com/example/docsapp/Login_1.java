@@ -128,6 +128,7 @@ public class Login_1 extends AppCompatActivity {
         GoogleSignInOptions gso = new GoogleSignInOptions
                 .Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestIdToken(getString(R.string.default_web_client_id))
+
                 .requestEmail()
                 .build();
         GoogleSignInClient = GoogleSignIn.getClient(this, gso);
@@ -140,11 +141,11 @@ public class Login_1 extends AppCompatActivity {
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-        // Result returned from launching the Intent from GoogleSignInApi.getSignInIntent(...);
+//         Result returned from launching the Intent from GoogleSignInApi.getSignInIntent(...);
         if (requestCode == RC_SIGN_IN) {
             Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
             try {
-                // Google Sign In was successful, authenticate with Firebase
+//                 Google Sign In was successful, authenticate with Firebase
                 GoogleSignInAccount account = task.getResult(ApiException.class);
                 assert account != null;
                 Log.d(TAG, "firebaseAuthWithGoogle:" + account.getId());
@@ -157,7 +158,7 @@ public class Login_1 extends AppCompatActivity {
         }
     }
 
-    private void firebaseAuthWithGoogle(String idToken) {
+   private void firebaseAuthWithGoogle(String idToken) {
         AuthCredential credential = GoogleAuthProvider.getCredential(idToken, null);
         Auth.signInWithCredential(credential)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
@@ -182,8 +183,8 @@ public class Login_1 extends AppCompatActivity {
         PhoneAuthProvider.getInstance().verifyPhoneNumber(
                 String.valueOf(UserPhoneNumber),
                 60,
-                // Phone number to verify
-                TimeUnit.SECONDS,
+//                 Phone number to verify
+           TimeUnit.SECONDS,
                 this,// Activity (for callback binding)
                 new PhoneAuthProvider.OnVerificationStateChangedCallbacks(){
 
