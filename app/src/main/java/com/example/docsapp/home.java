@@ -100,7 +100,6 @@ public class home extends Fragment {
         top_sliderView = v.findViewById(R.id.top_slider_view);
         camera_prescription=v.findViewById(R.id.Button_Image_Below_AskQuery);
         LoadingDialog loadingDialog = new LoadingDialog(getActivity());
-        ProgressBar progressBar=v.findViewById(R.id.ProgressBar);
         AddPrescription=v.findViewById(R.id.Add_Prescription_home);
         AskQuerry=v.findViewById(R.id.Ask_query_Button_home);
         call_for_orders=v.findViewById(R.id.Call_for_Orders_home);
@@ -137,7 +136,7 @@ public class home extends Fragment {
         SearchUniversal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(getActivity(),AllProductUniversal.class);
+                Intent intent=new Intent(getActivity(),Universal_Search.class);
                 startActivity(intent);
             }
         });

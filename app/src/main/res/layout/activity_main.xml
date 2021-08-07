@@ -19,7 +19,7 @@
           android:layout_width="match_parent"
           android:layout_height="60dp"
           android:background="@drawable/bg_grad_design_5"
-          app:title="MediHub"
+          app:title="@string/app_name"
           app:titleTextAppearance="@color/black"
           app:titleTextColor="@color/black" />
 

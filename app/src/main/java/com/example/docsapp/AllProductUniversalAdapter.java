@@ -35,6 +35,10 @@ public class AllProductUniversalAdapter extends FirebaseRecyclerAdapter<AllProdu
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.gedgets_card_design, parent, false);
         return new viewHolder(view);
     }
+//    @Override
+//    public int getItemCount() {
+//        return super.getItemCount(); // Where mDataSet is the list of your items
+//    }
 
     public static class viewHolder extends RecyclerView.ViewHolder{
         TextView Name,Price,MRP,Star,Discount;

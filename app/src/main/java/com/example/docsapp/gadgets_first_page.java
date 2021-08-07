@@ -1,5 +1,6 @@
 package com.example.docsapp;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -11,7 +12,10 @@ import android.widget.Toast;
 
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
@@ -19,8 +23,10 @@ public class gadgets_first_page extends AppCompatActivity {
     RecyclerView recyclerView;
     GadgetsCategoryGridAdapter adapter;
     RecyclerView.LayoutManager layoutManager;
+    FirebaseDatabase database = FirebaseDatabase.getInstance();
+    String s;
 
-
+    DatabaseReference databaseReference = database.getReference().child("Fragment_Home").child("Gadgets_World").child("Category");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,9 +44,25 @@ public class gadgets_first_page extends AppCompatActivity {
         adapter.setOnItemCLickListener(new GadgetsCategoryGridAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(DataSnapshot dataSnapshot, int position) {
-                String GadgetsFirstPage= dataSnapshot.getKey();
-                Intent intent=new Intent(gadgets_first_page.this,IndividualProductUniversal.class);
-                intent.putExtra("GadgetsFirstPageKey",GadgetsFirstPage);
+
+                String key= dataSnapshot.getKey();
+
+
+                databaseReference.addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                         s= (String) snapshot.child(key).child("Name").getValue();
+
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
+                    }
+                });
+
+                Intent intent=new Intent(gadgets_first_page.this,AllProductUniversal.class);
+                intent.putExtra("GadgetsFirstPageKey", s);
                 startActivity(intent);
             }
         });

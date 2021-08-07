@@ -40,7 +40,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DocsApp"
         tools:ignore="ExtraText">
-        <activity android:name=".AllProductUniversal"></activity>
+        <activity android:name=".AllProductUniversal" />
         <activity android:name=".IndividualProductUniversal" />
         <activity android:name=".OrderForLabTest" />
         <activity android:name=".Individual_Notification" />
@@ -65,6 +65,7 @@
         <activity android:name=".Brands" />
         <activity android:name=".search_by_category" />
         <activity android:name=".MainActivity" />
+        <activity android:name=".Universal_Search" />
 
         <meta-data
             android:name="preloaded_fonts"

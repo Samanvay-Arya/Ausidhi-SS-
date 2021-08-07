@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-<item android:id="@+id/universalsearchmenu"
+<item android:id="@+id/universalSearchMenu"
 android:icon="@drawable/ic_baseline_search_24"
-    android:title="search data"
+    android:title="@string/search_for_medicines_and_product"
     app:showAsAction="always"
     app:actionViewClass="android.widget.SearchView" />
 </menu>
