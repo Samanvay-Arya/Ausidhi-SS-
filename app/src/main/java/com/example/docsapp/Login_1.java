@@ -108,23 +108,31 @@ public class Login_1 extends AppCompatActivity {
         GetOTP.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                UserPhoneNumber= countryCodePicker.getFullNumberWithPlus().replace(" ","");
-                initiateOTP();
-                GetOTP.setVisibility(View.GONE);
-               progressBar.setVisibility(View.VISIBLE);
-                new CountDownTimer(60000, 1000) {
-                    @Override
-                    public void onTick(long millisUntilFinished) {
-                        TVTimer.setText(timer);
-                        timer-=1;
-                    }
+                if (EditTextPhoneNumber.length() == 0) {
+                    EditTextPhoneNumber.setError("Cannot be Empty");
+                } else if (EditTextPhoneNumber.length() <= 10) {
+                    EditTextPhoneNumber.setError("should be 10 Digit");
+                }
+                else {
+                    UserPhoneNumber = countryCodePicker.getFullNumberWithPlus().replace(" ", "");
+                    initiateOTP();
+                    GetOTP.setVisibility(View.GONE);
+                    progressBar.setVisibility(View.VISIBLE);
+                    new CountDownTimer(60000, 1000) {
+                        @Override
+                        public void onTick(long millisUntilFinished) {
+                            String string_timer = Integer.toString(timer);
+                            TVTimer.setText(string_timer);
+                            timer -= 1;
+                        }
 
-                    @Override
-                    public void onFinish() {
-                      GetOTP.setVisibility(View.VISIBLE);
-                      progressBar.setVisibility(View.GONE);
-                    }
-                }.start();
+                        @Override
+                        public void onFinish() {
+                            GetOTP.setVisibility(View.VISIBLE);
+                            progressBar.setVisibility(View.GONE);
+                        }
+                    }.start();
+                }
             }
         });
 
