@@ -121,33 +121,31 @@
             </LinearLayout>
 
 
-
-
             <androidx.cardview.widget.CardView
                 android:id="@+id/yourAccount"
                 android:layout_width="match_parent"
-                android:layout_marginHorizontal="15dp"
                 android:layout_height="50dp"
-                app:cardCornerRadius="30dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="15dp"
                 android:clickable="true"
                 android:focusable="true"
-                android:layout_marginTop="15dp"
-                app:cardElevation="10dp"
                 app:cardBackgroundColor="#94FDEB"
-                android:layout_gravity="center_horizontal">
+                app:cardCornerRadius="15dp"
+                app:cardElevation="10dp">
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
-                    android:background="@drawable/custom_button_2"
+                    android:background="@color/white"
                     android:gravity="center"
                     android:text="Your Account"
-                    app:autoSizeTextType="uniform"
-                    app:autoSizeMaxTextSize="18sp"
-                    app:autoSizeMinTextSize="2sp"
                     android:textColor="@color/black"
                     android:textStyle="bold"
+                    app:autoSizeMaxTextSize="18sp"
+                    app:autoSizeMinTextSize="2sp"
+                    app:autoSizeTextType="uniform"
                     tools:ignore="UsingOnClickInXml"
                     tools:targetApi="o" />
             </androidx.cardview.widget.CardView>
@@ -167,7 +165,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
-                    android:background="@drawable/custom_button_2"
+                    android:background="@color/white"
                     android:text="Select Language"
                     app:autoSizeTextType="uniform"
                     app:autoSizeMaxTextSize="18sp"
@@ -193,7 +191,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
-                    android:background="@drawable/custom_button_2"
+                    android:background="@color/white"
                     android:text="Saved Medicines"
                     app:autoSizeTextType="uniform"
                     app:autoSizeMaxTextSize="18sp"
@@ -220,7 +218,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
-                    android:background="@drawable/custom_button_2"
+                    android:background="@color/white"
                     android:text="Your orders"
                     app:autoSizeTextType="uniform"
                     app:autoSizeMaxTextSize="18sp"
@@ -246,7 +244,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
-                    android:background="@drawable/custom_button_2"
+                    android:background="@color/white"
                     android:text="Your Cart"
                     app:autoSizeTextType="uniform"
                     app:autoSizeMaxTextSize="18sp"
@@ -273,7 +271,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
-                    android:background="@drawable/custom_button_2"
+                    android:background="@color/white"
                     android:text="Notifications"
                     android:gravity="center"
                     app:autoSizeTextType="uniform"
@@ -300,7 +298,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
-                    android:background="@drawable/custom_button_2"
+                    android:background="@color/white"
                     android:text="Your Doctor's Appointments"
                     android:gravity="center"
                     app:autoSizeTextType="uniform"

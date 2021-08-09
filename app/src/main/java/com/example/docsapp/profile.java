@@ -42,6 +42,8 @@ import org.w3c.dom.Text;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
+
 import static com.example.docsapp.R.id.fragment_container_view_tag;
 
 
@@ -77,11 +79,12 @@ public class profile extends Fragment {
         Notifications=v.findViewById(R.id.Notifications_Profile);
         DoctorAppointment=v.findViewById(R.id.Doctors_Appointment_orders_Profile);
 
-        UserID=Auth.getCurrentUser().getUid();
+        UserID= Objects.requireNonNull(Auth.getCurrentUser()).getUid();
         DocumentReference documentReference=Store.collection("Users").document(UserID);
         documentReference.addSnapshotListener( new EventListener<DocumentSnapshot>() {
             @Override
             public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
+                assert value != null;
                 if (value.getString("Full Name")!=null){
                     User_Name.setText(value.getString("Full Name"));
                 }
@@ -98,7 +101,8 @@ public class profile extends Fragment {
         SelectLanguage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getActivity(), "select Language", Toast.LENGTH_SHORT).show();
+                Intent i= new Intent(getActivity(),AllProductUniversal.class);
+                startActivity(i);
             }
         });
         SavedMedicines.setOnClickListener(new View.OnClickListener() {

@@ -7,23 +7,33 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.widget.GridView;
 import android.widget.Toast;
 
 import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class gadgets_first_page extends AppCompatActivity {
     RecyclerView recyclerView;
     GadgetsCategoryGridAdapter adapter;
     RecyclerView.LayoutManager layoutManager;
     FirebaseDatabase database = FirebaseDatabase.getInstance();
+    FirebaseFirestore Store;
+    FirebaseAuth Auth;
+    String UserID;
     String s;
 
     DatabaseReference databaseReference = database.getReference().child("Fragment_Home").child("Gadgets_World").child("Category");
@@ -33,6 +43,10 @@ public class gadgets_first_page extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gadgets_first_page);
         recyclerView=findViewById(R.id.GridViewGadgetsCategory);
+        LoadingDialog loadingDialog = new LoadingDialog(this);
+        Auth=FirebaseAuth.getInstance();
+        Store=FirebaseFirestore.getInstance();
+        UserID=Auth.getCurrentUser().getUid();
         FirebaseRecyclerOptions<GadgetsCategoryModel> options =
                 new FirebaseRecyclerOptions.Builder<GadgetsCategoryModel>()
                         .setQuery(FirebaseDatabase.getInstance().getReference().child("Fragment_Home").child("Gadgets_World").child("Category"), GadgetsCategoryModel.class)
@@ -47,12 +61,10 @@ public class gadgets_first_page extends AppCompatActivity {
 
                 String key= dataSnapshot.getKey();
 
-
                 databaseReference.addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
                          s= (String) snapshot.child(key).child("Name").getValue();
-
                     }
 
                     @Override
@@ -61,12 +73,26 @@ public class gadgets_first_page extends AppCompatActivity {
                     }
                 });
 
-                Intent intent=new Intent(gadgets_first_page.this,AllProductUniversal.class);
-                intent.putExtra("GadgetsFirstPageKey", s);
-                startActivity(intent);
+                if (s!=null) {
+                    loadingDialog.startLoadingDialog();
+                    DocumentReference documentReference = Store.collection("Users").document(UserID);
+                    Map<String, Object> user = new HashMap<>();
+                    user.put("Home_Intent", s);
+                    documentReference.update(user).addOnSuccessListener(new OnSuccessListener<Void>() {
+                        @Override
+                        public void onSuccess(@NonNull Void aVoid) {
+                            loadingDialog.dismissDialog();
+                            Intent intent = new Intent(gadgets_first_page.this, AllProductUniversal.class);
+                            startActivity(intent);
+
+                        }
+                    });
+
+                }
+
+
             }
         });
-
     }
     @Override
     public void onStart() {

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_grad_design_11"
+    android:background="@color/purple_200"
     tools:context=".Login_1">
 
 
@@ -24,7 +24,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/bg_grad_design_12">
+            android:background="@color/Dutch_White">
 
             <EditText
                 android:id="@+id/User_Phone_number_login"
@@ -36,12 +36,27 @@
                 android:layout_marginEnd="15dp"
                 android:layout_marginRight="15dp"
                 android:background="@drawable/custom_button_2"
+                android:drawableStart="@drawable/ic_baseline_local_phone_24"
+                android:drawableLeft="@drawable/ic_baseline_local_phone_24"
                 android:gravity="center"
                 android:hint="Enter Phone Number"
                 android:inputType="phone"
                 android:textColor="@color/black"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/Login_WIth_Phone_Timer"
+                android:layout_width="50dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="160dp"
+                app:autoSizeMaxTextSize="15sp"
+                app:autoSizeMinTextSize="5sp"
+                app:autoSizeTextType="uniform"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -64,6 +79,7 @@
 
             <Button
                 android:id="@+id/Get_OTP_button"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
@@ -71,7 +87,7 @@
                 android:layout_marginRight="15dp"
                 android:background="@drawable/custom_button"
                 android:text="Get OTP"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/black"
                 android:textSize="18sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/User_Phone_number_login" />
@@ -110,7 +126,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@color/purple_700">
+                    android:background="@color/Raw_Sienna">
 
                     <ImageButton
                         android:id="@+id/login_1_next_button"
@@ -119,19 +135,20 @@
                         android:background="?android:attr/selectableItemBackground"
                         android:scaleX="2"
                         android:scaleY="2"
-                        android:src="@drawable/ic_baseline_arrow_forward_24" />
+                        android:src="@drawable/ic_baseline_arrow_forward_24"
+                        tools:ignore="ContentDescription" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-            <CheckBox
-                android:id="@+id/Checkbox_SIgnIn_with_phone"
+            <ProgressBar
+                android:id="@+id/Progress_Bar_Login_With_Phone"
+                style="?android:attr/progressBarStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="140dp"
-                android:text="I am not a Robot"
-                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="150dp"
+                android:layout_marginEnd="45dp"
+                android:layout_marginRight="45dp"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
 

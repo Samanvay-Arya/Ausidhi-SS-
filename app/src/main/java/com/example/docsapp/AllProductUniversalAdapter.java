@@ -13,7 +13,11 @@ import com.bumptech.glide.Glide;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 
+import java.util.ArrayList;
+import java.util.Locale;
+
 public class AllProductUniversalAdapter extends FirebaseRecyclerAdapter<AllProductUniversalModel,AllProductUniversalAdapter.viewHolder> {
+
 
     public AllProductUniversalAdapter(@NonNull FirebaseRecyclerOptions<AllProductUniversalModel> options) {
         super(options);
@@ -35,10 +39,7 @@ public class AllProductUniversalAdapter extends FirebaseRecyclerAdapter<AllProdu
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.gedgets_card_design, parent, false);
         return new viewHolder(view);
     }
-//    @Override
-//    public int getItemCount() {
-//        return super.getItemCount(); // Where mDataSet is the list of your items
-//    }
+
 
     public static class viewHolder extends RecyclerView.ViewHolder{
         TextView Name,Price,MRP,Star,Discount;

@@ -6,10 +6,24 @@
     android:layout_height="match_parent"
     tools:context=".AllProductUniversal">
 
+
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/RecyclerViewAll_Product_Univerasal"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:layout_editor_absoluteX="155dp"
         tools:layout_editor_absoluteY="107dp" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:id="@+id/TextView_all_Product_Universal"
+        android:textSize="30sp"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -27,6 +27,7 @@ import androidx.fragment.app.Fragment;
 import android.os.CountDownTimer;
 import android.os.Handler;
 import android.provider.MediaStore;
+import android.text.InputType;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
@@ -39,16 +40,22 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
 import com.smarteist.autoimageslider.IndicatorView.animation.type.IndicatorAnimationType;
 import com.smarteist.autoimageslider.SliderAnimations;
 import com.smarteist.autoimageslider.SliderView;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Objects;
 
 import static android.app.Activity.RESULT_OK;
@@ -57,6 +64,7 @@ import static android.app.Activity.RESULT_OK;
 public class home extends Fragment {
     private static final int REQUEST_IMAGE_CAPTURE =1 ;
     public SliderView top_sliderView;
+    String intentUniversal;
     Button call_for_orders,SearchUniversal;
     Button AskQuerry;
     ImageButton camera_prescription;
@@ -92,11 +100,18 @@ public class home extends Fragment {
             R.drawable.three,
             R.drawable.four
     };
+    FirebaseFirestore Store;
+    FirebaseAuth Auth;
+    String UserID;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_home, container, false);
+        Store = FirebaseFirestore.getInstance();
+        Auth=FirebaseAuth.getInstance();
+        UserID= Objects.requireNonNull(Auth.getCurrentUser()).getUid();
+
         top_sliderView = v.findViewById(R.id.top_slider_view);
         camera_prescription=v.findViewById(R.id.Button_Image_Below_AskQuery);
         LoadingDialog loadingDialog = new LoadingDialog(getActivity());
@@ -153,6 +168,7 @@ public class home extends Fragment {
 
            }
 
+
       new CountDownTimer(5000,500){
 
           @Override
@@ -197,9 +213,9 @@ public class home extends Fragment {
         call_for_orders.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (ContextCompat.checkSelfPermission(getActivity(),Manifest.permission
+                if (ContextCompat.checkSelfPermission(requireActivity(),Manifest.permission
                         .CALL_PHONE)!= PackageManager.PERMISSION_GRANTED){
-                    ActivityCompat.requestPermissions(getActivity(),new String[] {Manifest.permission.CALL_PHONE},1);
+                    ActivityCompat.requestPermissions(requireActivity(),new String[] {Manifest.permission.CALL_PHONE},1);
                 }
                 else {
                     Intent call = new Intent(Intent.ACTION_CALL);
@@ -211,9 +227,9 @@ public class home extends Fragment {
         AskQuerry.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (ContextCompat.checkSelfPermission(getActivity(),Manifest.permission
+                if (ContextCompat.checkSelfPermission(requireActivity(),Manifest.permission
                         .SEND_SMS)!= PackageManager.PERMISSION_GRANTED){
-                    ActivityCompat.requestPermissions(getActivity(),new String[] {Manifest.permission.SEND_SMS},1);
+                    ActivityCompat.requestPermissions(requireActivity(),new String[] {Manifest.permission.SEND_SMS},1);
                 }
                 else {
                     Intent Query = new Intent(Intent.ACTION_SENDTO, Uri.parse("smsto:" + "8218655014"));
@@ -275,7 +291,29 @@ public class home extends Fragment {
         });
 
 
+        Trending_Topic_1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+             intentUniversal=Trending_Topic_1.getText().toString();
+             sendIntent();
+            }
+        });
+
         return v;
+    }
+
+    private void sendIntent() {
+        DocumentReference documentReference=Store.collection("Users").document(UserID);
+        Map<String,Object> user= new HashMap<>();
+        user.put("Home_Intent",intentUniversal);
+        documentReference.update(user).addOnSuccessListener(new OnSuccessListener<Void>() {
+            @Override
+            public void onSuccess(@NonNull Void aVoid) {
+
+            }
+        });
+        Intent i=new Intent(getActivity(),AllProductUniversal.class);
+        startActivity(i);
     }
 
 

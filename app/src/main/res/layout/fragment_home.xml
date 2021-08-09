@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/Mustard"
+    android:background="@color/Pale_Aquamarine"
     android:orientation="vertical"
     tools:context=".home">
 
@@ -376,6 +376,8 @@
                                     android:id="@+id/Trending_Topic_1"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
+                                    android:clickable="true"
+                                    android:focusable="true"
                                     android:layout_gravity="center"
                                     android:layout_marginHorizontal="8dp"
                                     android:textColor="@color/black"

@@ -140,10 +140,15 @@
             android:layout_height="match_parent"
             android:weightSum="2"
             android:orientation="horizontal">
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.3"
+                android:src="@drawable/ic_doctor_svg"/>
         <TextView
             android:id="@+id/Name_Your_Account"
             android:layout_width="wrap_content"
-            android:layout_weight="1.8"
+            android:layout_weight="1.6"
             android:layout_height="match_parent"
             android:background="@color/white"
             app:autoSizeTextType="uniform"
@@ -181,10 +186,15 @@
             android:layout_height="match_parent"
             android:weightSum="2"
             android:orientation="horizontal">
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.3"
+                android:src="@drawable/ic_baseline_local_phone_24"/>
         <TextView
             android:id="@+id/Phone_Your_Account"
             android:layout_width="wrap_content"
-            android:layout_weight="1.8"
+            android:layout_weight="1.5"
             android:layout_height="match_parent"
             android:background="@color/white"
             app:autoSizeTextType="uniform"
@@ -220,10 +230,15 @@
             android:layout_height="match_parent"
             android:weightSum="2"
             android:orientation="horizontal">
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.3"
+                android:src="@drawable/ic_email"/>
         <TextView
             android:id="@+id/Email_Your_Account"
             android:layout_width="wrap_content"
-            android:layout_weight="1.8"
+            android:layout_weight="1.5"
             android:layout_height="match_parent"
             android:background="@color/white"
             app:autoSizeTextType="uniform"
@@ -259,10 +274,15 @@
             android:layout_height="match_parent"
             android:weightSum="2"
             android:orientation="horizontal">
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.3"
+                android:src="@drawable/ic_baseline_local_phone_24"/>
         <TextView
             android:id="@+id/PinCode_Your_Account"
             android:layout_width="wrap_content"
-            android:layout_weight="1.8"
+            android:layout_weight="1.5"
             android:layout_height="match_parent"
             android:background="@color/white"
             app:autoSizeTextType="uniform"

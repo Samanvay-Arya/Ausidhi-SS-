@@ -2,12 +2,14 @@ package com.example.docsapp;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.graphics.Color;
 import android.nfc.Tag;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -15,9 +17,12 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ProgressBar;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
@@ -41,6 +46,7 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
 import com.google.firebase.auth.PhoneAuthCredential;
 import com.google.firebase.auth.PhoneAuthProvider;
+import com.google.firebase.database.FirebaseDatabase;
 import com.hbb20.CountryCodePicker;
 
 import java.util.concurrent.TimeUnit;
@@ -64,6 +70,9 @@ public class Login_1 extends AppCompatActivity {
     Button Email_SignIn;
     CheckBox checkBox;
     GoogleApiClient googleApiClient;
+    TextView TVTimer;
+    int timer=60;
+    ProgressBar progressBar;
 
 
     @Override
@@ -79,7 +88,8 @@ public class Login_1 extends AppCompatActivity {
         Auth=FirebaseAuth.getInstance();
         OTP=findViewById(R.id.editTextOTP);
         GetOTP=findViewById(R.id.Get_OTP_button);
-        checkBox=findViewById(R.id.Checkbox_SIgnIn_with_phone);
+        TVTimer=findViewById(R.id.Login_WIth_Phone_Timer);
+        progressBar=findViewById(R.id.Progress_Bar_Login_With_Phone);
         createRequest();
         Email_SignIn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -100,6 +110,21 @@ public class Login_1 extends AppCompatActivity {
             public void onClick(View v) {
                 UserPhoneNumber= countryCodePicker.getFullNumberWithPlus().replace(" ","");
                 initiateOTP();
+                GetOTP.setVisibility(View.GONE);
+               progressBar.setVisibility(View.VISIBLE);
+                new CountDownTimer(60000, 1000) {
+                    @Override
+                    public void onTick(long millisUntilFinished) {
+                        TVTimer.setText(timer);
+                        timer-=1;
+                    }
+
+                    @Override
+                    public void onFinish() {
+                      GetOTP.setVisibility(View.VISIBLE);
+                      progressBar.setVisibility(View.GONE);
+                    }
+                }.start();
             }
         });
 

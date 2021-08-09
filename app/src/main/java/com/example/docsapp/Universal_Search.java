@@ -1,5 +1,6 @@
 package com.example.docsapp;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.GridLayoutManager;
@@ -13,13 +14,21 @@ import android.widget.SearchView;
 import android.widget.Toast;
 
 import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import java.util.ArrayList;
 
 
 public class Universal_Search extends AppCompatActivity {
     RecyclerView recyclerView;
+    ArrayList<String> allItem;
     AllProductUniversalAdapter adapter;
     RecyclerView.LayoutManager layoutManager;
+    int childCount;
     Toolbar toolbar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +37,7 @@ public class Universal_Search extends AppCompatActivity {
         toolbar=findViewById(R.id.Toolbar_universal_search);
         setSupportActionBar(toolbar);
         recyclerView=findViewById(R.id.universal_recycler_view);
+
         FirebaseRecyclerOptions<AllProductUniversalModel> options =
                 new FirebaseRecyclerOptions.Builder<AllProductUniversalModel>()
                         .setQuery(FirebaseDatabase.getInstance().getReference().child("All_Product").child("Test"), AllProductUniversalModel.class)
@@ -72,20 +82,21 @@ public class Universal_Search extends AppCompatActivity {
     }
 
     private void processSearch(String s) {
-        String lower=s.toLowerCase();
+        String lower=s.toLowerCase().trim();
         FirebaseRecyclerOptions<AllProductUniversalModel> Options1 =
                 new FirebaseRecyclerOptions.Builder<AllProductUniversalModel>()
-                        .setQuery(FirebaseDatabase.getInstance().getReference().child("All_Product").child("Test").orderByChild("Keyword").startAt(lower).endBefore(lower +"\uf8ff"), AllProductUniversalModel.class)
+                        .setQuery(FirebaseDatabase.getInstance().getReference().child("All_Product").child("Test").orderByChild("Keyword").startAt(lower).endAt(lower+"\uf8ff"), AllProductUniversalModel.class)
                         .build();
 
         adapter = new AllProductUniversalAdapter(Options1);
 
-        adapter.startListening();
 
+        adapter.startListening();
         layoutManager = new GridLayoutManager(this, 2);
 
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(adapter);
-       
+
+
     }
 }

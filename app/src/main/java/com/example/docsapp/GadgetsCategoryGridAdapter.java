@@ -24,6 +24,7 @@ import java.util.ArrayList;
 public class GadgetsCategoryGridAdapter extends FirebaseRecyclerAdapter<GadgetsCategoryModel,GadgetsCategoryGridAdapter.viewHolder> {
 
 
+
     private GadgetsCategoryGridAdapter.OnItemClickListener listener;
     public GadgetsCategoryGridAdapter(@NonNull FirebaseRecyclerOptions<GadgetsCategoryModel> options) {
         super(options);
@@ -32,6 +33,7 @@ public class GadgetsCategoryGridAdapter extends FirebaseRecyclerAdapter<GadgetsC
     @Override
     protected void onBindViewHolder(@NonNull viewHolder holder, int position, @NonNull GadgetsCategoryModel model) {
         holder.Name.setText(model.getName());
+
         Glide.with(holder.Image.getContext()).load(model.getImage()).into(holder.Image);
 
     }
