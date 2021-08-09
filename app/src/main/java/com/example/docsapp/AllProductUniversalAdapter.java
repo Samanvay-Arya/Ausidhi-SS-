@@ -55,4 +55,6 @@ public class AllProductUniversalAdapter extends FirebaseRecyclerAdapter<AllProdu
 
         }
     }
+
+
 }

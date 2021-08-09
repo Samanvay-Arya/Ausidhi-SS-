@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Color;
 import android.nfc.Tag;
@@ -116,6 +117,7 @@ public class Login_1 extends AppCompatActivity {
                 else {
                     UserPhoneNumber = countryCodePicker.getFullNumberWithPlus().replace(" ", "");
                     initiateOTP();
+                    TVTimer.setVisibility(View.VISIBLE);
                     GetOTP.setVisibility(View.GONE);
                     progressBar.setVisibility(View.VISIBLE);
                     new CountDownTimer(60000, 1000) {
@@ -126,9 +128,12 @@ public class Login_1 extends AppCompatActivity {
                             timer -= 1;
                         }
 
+                        @SuppressLint("SetTextI18n")
                         @Override
                         public void onFinish() {
+                            TVTimer.setVisibility(View.GONE);
                             GetOTP.setVisibility(View.VISIBLE);
+                            GetOTP.setText("ReSend");
                             progressBar.setVisibility(View.GONE);
                         }
                     }.start();
@@ -160,7 +165,7 @@ public class Login_1 extends AppCompatActivity {
         // Configure Google Sign In
         GoogleSignInOptions gso = new GoogleSignInOptions
                 .Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-                .requestIdToken(getString(R.string.default_web_client_id))
+//                .requestIdToken(getString(R.string.default_web_client_id))
 
                 .requestEmail()
                 .build();

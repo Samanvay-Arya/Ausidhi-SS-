@@ -63,7 +63,7 @@ public class Universal_Search extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.universalsearchmenu,menu);
-        MenuItem item=menu.findItem(R.id.universalSearchMenu);
+        MenuItem item=menu.findItem(R.id.UniversalSearchMenu);
         SearchView Searchview=(SearchView)item.getActionView();
         Searchview.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
