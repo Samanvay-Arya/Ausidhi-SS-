@@ -379,9 +379,11 @@
                                     android:clickable="true"
                                     android:focusable="true"
                                     android:layout_gravity="center"
+                                    android:clickable="true"
                                     android:layout_marginHorizontal="8dp"
                                     android:textColor="@color/black"
-                                    android:textSize="20sp" />
+                                    android:textSize="20sp"
+                                    android:focusable="true" />
                             </androidx.cardview.widget.CardView>
 
                             <androidx.cardview.widget.CardView
@@ -402,9 +404,11 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center"
+                                    android:clickable="true"
                                     android:layout_marginHorizontal="8dp"
                                     android:textColor="@color/black"
-                                    android:textSize="20sp" />
+                                    android:textSize="20sp"
+                                    android:focusable="true" />
                             </androidx.cardview.widget.CardView>
 
                             <androidx.cardview.widget.CardView
@@ -425,9 +429,11 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center"
+                                    android:clickable="true"
                                     android:layout_marginHorizontal="8dp"
                                     android:textColor="@color/black"
-                                    android:textSize="20sp" />
+                                    android:textSize="20sp"
+                                    android:focusable="true" />
                             </androidx.cardview.widget.CardView>
 
                             <androidx.cardview.widget.CardView
@@ -448,9 +454,11 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center"
+                                    android:clickable="true"
                                     android:layout_marginHorizontal="8dp"
                                     android:textColor="@color/black"
-                                    android:textSize="20sp" />
+                                    android:textSize="20sp"
+                                    android:focusable="true" />
                             </androidx.cardview.widget.CardView>
                         </LinearLayout>
                     </HorizontalScrollView>
@@ -607,10 +615,17 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
+
                             android:textAllCaps="false"
                             android:textColor="@color/black"
                             android:textColorHighlight="@color/purple_200"
                             android:textStyle="bold" />
+                        <Button
+
+                            android:id="@+id/Individual_Category_1_Button"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="?actionBarItemBackground"/>
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
@@ -636,6 +651,11 @@
                             android:textColor="@color/black"
                             android:textColorHighlight="@color/purple_200"
                             android:textStyle="bold" />
+                        <Button
+                            android:id="@+id/Individual_Category_2_Button"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="?actionBarItemBackground"/>
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
@@ -661,6 +681,11 @@
                             android:textColor="@color/black"
                             android:textColorHighlight="@color/purple_200"
                             android:textStyle="bold" />
+                        <Button
+                            android:id="@+id/Individual_Category_3_Button"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="?actionBarItemBackground"/>
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
@@ -686,6 +711,11 @@
                             android:textColor="@color/black"
                             android:textColorHighlight="@color/purple_200"
                             android:textStyle="bold" />
+                        <Button
+                            android:id="@+id/Individual_Category_4_Button"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="?actionBarItemBackground"/>
                     </androidx.cardview.widget.CardView>
 
 
@@ -765,6 +795,11 @@
                             android:textColor="@color/black"
                             android:textColorHighlight="@color/purple_200"
                             android:textStyle="bold" />
+                        <Button
+                            android:id="@+id/Button_1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="?actionBarItemBackground"/>
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
@@ -786,11 +821,17 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:paddingHorizontal="20sp"
+
                             android:textAlignment="center"
                             android:textAllCaps="false"
                             android:textColor="@color/black"
                             android:textColorHighlight="@color/purple_200"
                             android:textStyle="bold" />
+                        <Button
+                            android:id="@+id/Button_2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="?actionBarItemBackground"/>
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
@@ -818,6 +859,11 @@
                             android:textColor="@color/black"
                             android:textColorHighlight="@color/purple_200"
                             android:textStyle="bold" />
+                        <Button
+                            android:id="@+id/Button_3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="?actionBarItemBackground"/>
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
@@ -844,6 +890,11 @@
                             android:textColor="@color/black"
                             android:textColorHighlight="@color/purple_200"
                             android:textStyle="bold" />
+                        <Button
+                            android:id="@+id/Button_4"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="?actionBarItemBackground"/>
                     </androidx.cardview.widget.CardView>
 
                 </LinearLayout>
@@ -919,6 +970,11 @@
                             android:textColor="@color/black"
                             android:textColorHighlight="@color/purple_200"
                             android:textStyle="bold" />
+                        <Button
+                            android:id="@+id/Button_Brand_1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="?actionBarItemBackground"/>
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
@@ -945,6 +1001,11 @@
                             android:textColor="@color/black"
                             android:textColorHighlight="@color/purple_200"
                             android:textStyle="bold" />
+                        <Button
+                            android:id="@+id/Button_Brand_2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="?actionBarItemBackground"/>
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
@@ -971,6 +1032,11 @@
                             android:textColor="@color/black"
                             android:textColorHighlight="@color/purple_200"
                             android:textStyle="bold" />
+                        <Button
+                            android:id="@+id/Button_Brand_3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="?actionBarItemBackground"/>
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
@@ -997,6 +1063,11 @@
                             android:textColor="@color/black"
                             android:textColorHighlight="@color/purple_200"
                             android:textStyle="bold" />
+                        <Button
+                            android:id="@+id/Button_Brand_4"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="?actionBarItemBackground"/>
                     </androidx.cardview.widget.CardView>
 
                 </LinearLayout>
@@ -1071,6 +1142,11 @@
                             android:textColor="@color/black"
                             android:textColorHighlight="@color/purple_200"
                             android:textStyle="bold" />
+                        <Button
+                            android:id="@+id/Button_Disease_1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="?actionBarItemBackground"/>
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
@@ -1097,6 +1173,11 @@
                             android:textColor="@color/black"
                             android:textColorHighlight="@color/purple_200"
                             android:textStyle="bold" />
+                        <Button
+                            android:id="@+id/Button_Disease_2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="?actionBarItemBackground"/>
                     </androidx.cardview.widget.CardView>
 
 
@@ -1124,6 +1205,11 @@
                             android:textColor="@color/black"
                             android:textColorHighlight="@color/purple_200"
                             android:textStyle="bold" />
+                        <Button
+                            android:id="@+id/Button_Disease_3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="?actionBarItemBackground"/>
                     </androidx.cardview.widget.CardView>
 
 
@@ -1151,6 +1237,11 @@
                             android:textColor="@color/black"
                             android:textColorHighlight="@color/purple_200"
                             android:textStyle="bold" />
+                        <Button
+                            android:id="@+id/Button_Disease_4"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="?actionBarItemBackground"/>
                     </androidx.cardview.widget.CardView>
                 </LinearLayout>
             </HorizontalScrollView>

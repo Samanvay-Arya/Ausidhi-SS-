@@ -8,6 +8,19 @@ public class AllProductUniversalModel {
     String Rate;
     String Discount;
     String MRP;
+    AllProductUniversalModel(){
+
+    }
+
+    public AllProductUniversalModel(String name, String price, String rate, String discount, String MRP, String image) {
+        Name = name;
+        Price = price;
+        Rate = rate;
+        Discount = discount;
+        this.MRP = MRP;
+        Image = image;
+    }
+
 
     public String getName() {
         return Name;
@@ -57,17 +70,10 @@ public class AllProductUniversalModel {
         Image = image;
     }
 
-    public AllProductUniversalModel(String name, String price, String rate, String discount, String MRP, String image) {
-        Name = name;
-        Price = price;
-        Rate = rate;
-        Discount = discount;
-        this.MRP = MRP;
-        Image = image;
-    }
+    
 
     String Image;
-  AllProductUniversalModel(){
+
 
   }
-}
+
