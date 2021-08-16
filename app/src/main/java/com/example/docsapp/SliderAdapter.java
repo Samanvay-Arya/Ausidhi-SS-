@@ -21,7 +21,6 @@ public class SliderAdapter extends SliderViewAdapter<SliderAdapter.Holder>{
     @Override
     public void onBindViewHolder(Holder viewHolder, int position) {
         viewHolder.imageView.setImageResource(images[position]);
-
     }
 
 
@@ -37,6 +36,5 @@ public class SliderAdapter extends SliderViewAdapter<SliderAdapter.Holder>{
             super(itemView);
             imageView=itemView.findViewById(R.id.image_slider_top);
         }
-
     }
 }

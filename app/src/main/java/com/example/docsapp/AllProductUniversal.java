@@ -42,14 +42,15 @@ public class AllProductUniversal extends AppCompatActivity {
         textView=findViewById(R.id.TextView_all_Product_Universal);
         Auth=FirebaseAuth.getInstance();
         Store=FirebaseFirestore.getInstance();
-        UserID=Auth.getCurrentUser().getUid();
+        UserID= Objects.requireNonNull(Auth.getCurrentUser()).getUid();
         LoadingDialog loadingDialog = new LoadingDialog(this);
         DocumentReference documentReference=Store.collection("Users").document(UserID);
         documentReference.addSnapshotListener(this, new EventListener<DocumentSnapshot>() {
             @Override
             public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
+                assert value != null;
                 if (value.getString("Home_Intent")!=null) {
-                    category = value.getString("Home_Intent").toLowerCase().trim();
+                    category = Objects.requireNonNull(value.getString("Home_Intent")).toLowerCase().trim();
                 }
             }
         });

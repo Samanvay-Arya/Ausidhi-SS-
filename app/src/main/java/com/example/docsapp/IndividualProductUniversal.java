@@ -27,12 +27,12 @@ public class IndividualProductUniversal extends AppCompatActivity {
 
     SliderView sliderView;
     DatabaseReference databaseReference;
-    int[] topSliderImages = {
-            R.drawable.logo_name,
-            R.drawable.logo_name,
-            R.drawable.ic_logo_full,
-            R.drawable.logo_name
-    };
+//    int[] topSliderImages = {
+//            R.drawable.logo_name,
+//            R.drawable.logo_name,
+//            R.drawable.ic_logo_full,
+//            R.drawable.logo_name
+//    };
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -62,11 +62,11 @@ public class IndividualProductUniversal extends AppCompatActivity {
 //
 //            }
 //        });
-        SliderAdapter sliderAdapter = new SliderAdapter(topSliderImages);
-        sliderView.setSliderAdapter(sliderAdapter);
-        sliderView.setIndicatorAnimation(IndicatorAnimationType.DROP);
-        sliderView.setSliderTransformAnimation(SliderAnimations.SIMPLETRANSFORMATION);
-        sliderView.startAutoCycle();
+//        SliderAdapter sliderAdapter = new SliderAdapter();
+//        sliderView.setSliderAdapter(sliderAdapter);
+//        sliderView.setIndicatorAnimation(IndicatorAnimationType.DROP);
+//        sliderView.setSliderTransformAnimation(SliderAnimations.SIMPLETRANSFORMATION);
+//        sliderView.startAutoCycle();
 
     }
 }
