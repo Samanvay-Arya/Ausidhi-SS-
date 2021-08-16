@@ -61,4 +61,48 @@
     <string name="add_to_cart">Add to Cart</string>
 
 
+<!--    code for spinner of detail universe-->
+    <string name="spinner">spinner</string>
+<string-array name="Spinner_items">
+<item>Spinner Item One</item>
+
+    <item>Spinner Item Two</item>
+    <item>Spinner Item Three</item>
+    <item>Spinner Item Four</item>
+    <item>Spinner Item Five</item>
+    <item>Spinner Item Six</item>
+    <item>Spinner Item Seven</item>
+    <item>Spinner Item Eight</item>
+    <item>Spinner Item Nine</item>
+    <item>Spinner Item Ten</item>
+</string-array>
+
+
+
+<string name="SELECTQTY">SelectQTY</string>
+<string-array name="SelectQty">
+
+<item> One</item>
+<item> Two</item>
+<item> Three</item>
+<item>Four</item>
+<item> Five</item>
+<item> Six</item>
+<item>Seven</item>
+<item>Eight</item>
+<item> Nine</item>
+<item> Ten</item>
+</string-array>
+
+    <string name="Name">Simple Payment options</string>
+    <string-array name="SelectPaymentMOde">
+        <item> Google Pay</item>
+        <item> Paytm</item>
+        <item> Rasor Pay</item>
+        <item>NetBanking</item>
+
+
+
+    </string-array>
 </resources>
+

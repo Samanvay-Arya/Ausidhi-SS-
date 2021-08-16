@@ -101,7 +101,7 @@ public class profile extends Fragment {
         SelectLanguage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i= new Intent(getActivity(),AllProductUniversal.class);
+                Intent i= new Intent(getActivity(),DetailUniversal.class);
                 startActivity(i);
             }
         });
