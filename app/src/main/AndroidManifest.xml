@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.docsapp">
+    package="com.example.docsapp" >
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission
@@ -39,7 +39,9 @@
         android:roundIcon="@drawable/ic_logo_full"
         android:supportsRtl="true"
         android:theme="@style/Theme.DocsApp"
-        tools:ignore="ExtraText">
+        tools:ignore="ExtraText" >
+        <activity android:name=".MainActivity2" >
+        </activity>
         <activity android:name=".AllProductUniversal" />
         <activity android:name=".IndividualProductUniversal" />
         <activity android:name=".OrderForLabTest" />
@@ -49,7 +51,7 @@
         <activity android:name=".RegisterWithEmail" />
         <activity android:name=".SignUp" />
         <activity android:name=".FirstLogin" />
-        <activity android:name=".Logo_launcher">
+        <activity android:name=".Logo_launcher" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -64,10 +66,11 @@
         <activity android:name=".gadgets_first_page" />
         <activity android:name=".Brands" />
         <activity android:name=".search_by_category" />
-        <activity android:name=".MainActivity" >
+        <activity android:name=".MainActivity" />
         <activity android:name=".Universal_Search" />
+        <activity android:name=".DetailUniversal" />
+        <activity android:name=".OffersUniversal" />
 
-</activity>
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />

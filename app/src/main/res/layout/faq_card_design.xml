@@ -15,6 +15,31 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <TextView
+                android:id="@+id/faqquestion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:autoSizeMaxTextSize="24sp"
+                android:autoSizeMinTextSize="8sp"
+                android:autoSizeTextType="uniform"
+                android:text="shorya garg is a good boy"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/faqanswer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:autoSizeMaxTextSize="24sp"
+                android:autoSizeMinTextSize="8sp"
+                android:autoSizeTextType="uniform"
+                android:text="shorya garg is a good boy"
+                android:textColor="@color/Blue_Green" />
+
+
+        </LinearLayout>
+
     </androidx.cardview.widget.CardView>
 
 

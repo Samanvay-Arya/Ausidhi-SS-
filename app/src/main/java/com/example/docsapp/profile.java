@@ -129,7 +129,7 @@ public class profile extends Fragment {
         DoctorAppointment.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getActivity(), "You don't have any Appointment yet", Toast.LENGTH_SHORT).show();
+
             }
         });
         YourCart.setOnClickListener(new View.OnClickListener() {
