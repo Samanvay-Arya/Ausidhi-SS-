@@ -48,8 +48,6 @@
         <activity android:name=".LoginWithEmail" />
         <activity android:name=".RegisterWithEmail" />
         <activity android:name=".SignUp" />
-        <activity android:name=".DetailUniversal"/>
-        <activity android:name=".OffersUniversal"/>
         <activity android:name=".FirstLogin" />
         <activity android:name=".Logo_launcher">
             <intent-filter>
@@ -66,8 +64,10 @@
         <activity android:name=".gadgets_first_page" />
         <activity android:name=".Brands" />
         <activity android:name=".search_by_category" />
-        <activity android:name=".MainActivity" />
+        <activity android:name=".MainActivity" >
         <activity android:name=".Universal_Search" />
+
+</activity>
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
