@@ -111,7 +111,7 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1.5dp"
-                android:background="@color/black" />
+                android:background="@color/Black2" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -302,7 +302,7 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1.5dp"
-                android:background="@color/black"
+                android:background="@color/Black2"
                 />
 
             <ImageButton
@@ -317,7 +317,7 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1.5dp"
-                android:background="@color/black"
+                android:background="@color/Black2"
                 />
             <!--Trending Topics and Explore more TextView-->
 
@@ -551,7 +551,7 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1.5dp"
-                android:background="@color/black"
+                android:background="@color/Black2"
                 android:layout_marginBottom="2dp"
                 />
 
@@ -566,7 +566,7 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1.5dp"
-                android:background="@color/black"
+                android:background="@color/Black2"
                 />
 
             <LinearLayout
@@ -653,7 +653,7 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1.5dp"
-                android:background="@color/black"
+                android:background="@color/Black2"
                 />
 
             <LinearLayout
@@ -850,7 +850,7 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1.5dp"
-                android:background="@color/black"
+                android:background="@color/Black2"
                 />
 
             <LinearLayout
@@ -1051,7 +1051,7 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1.5dp"
-                android:background="@color/black"
+                android:background="@color/Black2"
                 />
 
             <LinearLayout
@@ -1238,7 +1238,7 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1.5dp"
-                android:background="@color/black"
+                android:background="@color/Black2"
                 />
 
             <LinearLayout
@@ -1422,7 +1422,7 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1.5dp"
-                android:background="@color/black"
+                android:background="@color/Black2"
                 />
         </LinearLayout>
     </ScrollView>
