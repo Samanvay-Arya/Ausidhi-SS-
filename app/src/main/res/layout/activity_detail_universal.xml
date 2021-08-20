@@ -6,6 +6,7 @@
     android:id="@+id/scrollable"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+    android:background="@drawable/bg_grad_design_4"
     android:scrollbarSize="15sp"
     tools:context=".DetailUniversal">
 
@@ -49,8 +50,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="10dp"
                     android:layout_weight="1"
-
-                    android:text="use default info" />
+                    android:text="use default info"
+                    android:textColor="@color/black" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -105,7 +106,11 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:text="Item Details"
-                    android:textSize="24dp" />
+                    android:textColor="@color/black"
+                    android:textSize="24sp"
+                    app:autoSizeMaxTextSize="30sp"
+                    app:autoSizeMinTextSize="15sp"
+                    app:autoSizeTextType="uniform" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -123,7 +128,6 @@
                         android:layout_height="match_parent"
                         android:layout_marginTop="15dp"
                         android:layout_weight="1"
-                        android:text="Name"
                         android:textSize="18sp" />
 
 
@@ -142,7 +146,8 @@
                         android:layout_marginTop="15dp"
                         android:layout_weight="1"
                         android:text="Item MRP -"
-                        android:textSize="18dp" />
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
 
                     <TextView
                         android:layout_width="0dp"
@@ -150,7 +155,7 @@
                         android:layout_marginHorizontal="15dp"
                         android:layout_marginTop="15dp"
                         android:layout_weight="1"
-                        android:text="-----"
+                        android:text="@string/dash"
                         android:textSize="18dp" />
 
 
@@ -169,7 +174,8 @@
                         android:layout_marginTop="15dp"
                         android:layout_weight="1"
                         android:text="Item Price -"
-                        android:textSize="18dp" />
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
 
                     <TextView
                         android:layout_width="0dp"
@@ -177,7 +183,7 @@
                         android:layout_marginHorizontal="15dp"
                         android:layout_marginTop="15dp"
                         android:layout_weight="1"
-                        android:text="Price-"
+                        android:text="@string/dash"
                         android:textSize="18dp" />
 
                 </LinearLayout>
@@ -195,7 +201,8 @@
                         android:layout_marginTop="15dp"
                         android:layout_weight="1"
                         android:text="Item Discount -"
-                        android:textSize="18dp" />
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
 
                     <TextView
                         android:layout_width="0dp"
@@ -203,8 +210,39 @@
                         android:layout_marginHorizontal="15dp"
                         android:layout_marginTop="15dp"
                         android:layout_weight="1"
-                        android:text="Price-"
+                        android:text="@string/dash"
                         android:textSize="18dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="15dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:text="@string/quantity"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+
+                    <Spinner
+
+                        android:id="@+id/QTY_spinner"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="15dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_weight="1"
+                        android:entries="@array/QTY"
+                        android:textSize="18sp" />
+
 
                 </LinearLayout>
 
@@ -221,7 +259,8 @@
                         android:layout_marginTop="15dp"
                         android:layout_weight="1"
                         android:text="Item Total -"
-                        android:textSize="18dp" />
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
 
                     <TextView
                         android:layout_width="0dp"
@@ -229,45 +268,19 @@
                         android:layout_marginHorizontal="15dp"
                         android:layout_marginTop="15dp"
                         android:layout_weight="1"
-                        android:text="Price-"
+                        android:text="@string/dash"
                         android:textSize="18dp" />
 
                 </LinearLayout>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:weightSum="2">
 
-                    <Spinner
-
-                        android:id="@+id/SHOW_PROGRESS"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="15dp"
-                        android:layout_marginTop="12dp"
-                        android:layout_weight="1"
-                        android:entries="@array/SelectQty"
-                        android:textSize="18dp" />
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_marginHorizontal="15dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_weight="1"
-                        android:text="Price-"
-                        android:textSize="18dp" />
-
-                </LinearLayout>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="wrap_content"
             android:layout_marginHorizontal="20dp"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
@@ -285,74 +298,110 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:weightSum="2">
-                <!--        <Spinner-->
-                <!--            android:id="@+id/spinner"-->
-                <!--            tools:listheader="Choose Address"-->
-                <!--            android:layout_width="match_parent"-->
-                <!--            android:layout_height="match_parent"-->
-                <!--android:layout_weight="1"-->
-                <!--            android:layout_marginHorizontal="10dp"-->
-                <!--            tools:ignore="HardcodedText" />-->
+
                 <Spinner
 
-                    android:id="@+id/SHOW_ALL"
+                    android:id="@+id/All_Addresses"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="10dp"
                     android:layout_marginTop="15dp"
                     android:layout_weight="2"
-                    android:entries="@array/Spinner_items" />
+                    android:entries="@array/SelectQty" />
 
-                <!--        <EditText-->
-                <!--            android:layout_width="match_parent"-->
-
-                <!--            android:layout_height="match_parent"-->
-                <!--            android:inputType="number"-->
-                <!--            android:hint="Qty"-->
-                <!--            android:textSize="24dp"-->
-                <!--            android:paddingRight="10dp"-->
-                <!--            android:layout_marginHorizontal="10dp"/>-->
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textImeMultiLine"
+                            android:autoSizeTextType="uniform"
+                            android:paddingHorizontal="10dp"
+                            android:layout_marginHorizontal="10dp"/>
             </LinearLayout>
 
 
         </androidx.cardview.widget.CardView>
 
-        <androidx.cardview.widget.CardView
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="230dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
             android:layout_marginHorizontal="20dp"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
-            app:cardCornerRadius="10dp"
-            app:cardElevation="8dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0">
+            android:weightSum="2">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:weightSum="2">
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="0.38"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="8dp"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:layout_marginTop="90dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:src="@drawable/ic_noun_online_payment_1875478"/>
+                    <ImageView
+                        android:layout_marginTop="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:src="@drawable/ic_noun_cash_on_delivery_3485009"/>
 
-                <TextView
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="230dp"
+                android:layout_weight="1.62"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0">
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="Payment option"
-                    android:textSize="24dp" />
+                    android:orientation="vertical"
+                    android:weightSum="2">
 
-                <ListView
-                    android:id="@+id/list_item"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:gravity="center"
+                        android:text="@string/payment_option"
+                        android:textColor="@color/black"
+                        app:autoSizeMinTextSize="7sp"
+                        app:autoSizeTextType="uniform"
+                        app:autoSizeMaxTextSize="25sp" />
+
+                    <ListView
+                        android:layout_marginTop="25sp"
+                        android:id="@+id/list_item"
+                        android:divider="@android:color/transparent"
+                        android:dividerHeight="25sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        tools:ignore="SmallSp" />
 
 
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+
+
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="50dp"
@@ -367,17 +416,24 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:layout_gravity="center"
-                android:text="Buy Now"/>
-        </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="vertical">
+
+                <Button
+                    style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    app:backgroundTint="#00EE00"
+                    android:gravity="center"
+                    app:autoSizeTextType="uniform"
+                    app:autoSizeMinTextSize="12sp"
+                    app:autoSizeMaxTextSize="22sp"
+                    android:text="Place Order" />
+            </LinearLayout>
         </androidx.cardview.widget.CardView>
     </LinearLayout>
 </ScrollView>

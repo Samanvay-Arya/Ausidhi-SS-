@@ -345,7 +345,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="file:/$PROJECT_DIR$/../AppData/Local/Android/Sdk/icons/material/materialicons/notifications_active/baseline_notifications_active_24.xml" />
+                                      <entry key="url" value="file:/$PROJECT_DIR$/../../../Samanvay%20Arya/AppData/Local/Android/Sdk/icons/material/materialicons/payments/baseline_payments_24.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -356,8 +356,8 @@
                         <option name="values">
                           <map>
                             <entry key="assetSourceType" value="FILE" />
-                            <entry key="outputName" value="ic_noun_medicines" />
-                            <entry key="sourceFile" value="C:\Users\shory\Downloads\noun_medicines_947580.svg" />
+                            <entry key="outputName" value="ic_noun_online_payment_1875478" />
+                            <entry key="sourceFile" value="C:\Users\Samanvay Arya\Desktop\noun_Online Payment_1875478.svg" />
                           </map>
                         </option>
                       </PersistentState>

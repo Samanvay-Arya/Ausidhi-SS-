@@ -1,5 +1,6 @@
 package com.example.docsapp;
 
+import androidx.annotation.MainThread;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,6 +8,7 @@ import android.content.Intent;
 import android.hardware.usb.UsbRequest;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -34,6 +36,7 @@ public class Login_2 extends AppCompatActivity {
     FirebaseFirestore FireStore;
     String UserID;
     FirebaseAuth Auth;
+    Button Skip;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,8 +48,16 @@ public class Login_2 extends AppCompatActivity {
         UserState=findViewById(R.id.User_State_Login_2);
         UserCity=findViewById(R.id.User_City_Login_2);
         Next=findViewById(R.id.Next_Login_2);
+        Skip=findViewById(R.id.Skip_Login_2);
         Auth=FirebaseAuth.getInstance();
         FireStore=FirebaseFirestore.getInstance();
+        Skip.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i= new Intent(Login_2.this, MainActivity.class);
+                startActivity(i);
+            }
+        });
         Next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

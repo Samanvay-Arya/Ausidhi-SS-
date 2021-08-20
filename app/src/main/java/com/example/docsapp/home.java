@@ -42,7 +42,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-
 public class home extends Fragment {
     private static final int REQUEST_IMAGE_CAPTURE =1 ;
     ImageSlider top_sliderView;

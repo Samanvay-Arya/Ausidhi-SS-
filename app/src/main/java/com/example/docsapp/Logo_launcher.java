@@ -23,16 +23,15 @@ public class Logo_launcher extends AppCompatActivity {
             @Override
             public void onFinish() {
                 FirebaseUser currentUser = Auth.getCurrentUser();
+                Intent i;
                 if (currentUser!=null){
-                    Intent i=new Intent(Logo_launcher.this,MainActivity.class);
-                    startActivity(i);
-                    finish();
+                    i = new Intent(Logo_launcher.this, MainActivity.class);
                 }
                 else{
-                    Intent i = new Intent(Logo_launcher.this,FirstLogin.class);
-                    startActivity(i);
-                    finish();
+                    i = new Intent(Logo_launcher.this, FirstLogin.class);
                 }
+                startActivity(i);
+                finish();
 
             }
         }.start();

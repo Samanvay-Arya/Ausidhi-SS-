@@ -27,7 +27,7 @@ public class Lab_test_recycler_Adapter extends FirebaseRecyclerAdapter<LabTestMo
     @NonNull
     @Override
     public LabViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View View = LayoutInflater.from(parent.getContext()).inflate(R.layout.labtest_recylcer_design, parent, false);
+        View View  = LayoutInflater.from(parent.getContext()).inflate(R.layout.labtest_recylcer_design, parent, false);
         return new LabViewHolder(View);
     }
 

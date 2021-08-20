@@ -63,23 +63,22 @@
 
 <!--    code for spinner of detail universe-->
     <string name="spinner">spinner</string>
-<string-array name="Spinner_items">
-<item>Spinner Item One</item>
+<string-array name="QTY">
+<item>1</item>
 
-    <item>Spinner Item Two</item>
-    <item>Spinner Item Three</item>
-    <item>Spinner Item Four</item>
-    <item>Spinner Item Five</item>
-    <item>Spinner Item Six</item>
-    <item>Spinner Item Seven</item>
-    <item>Spinner Item Eight</item>
-    <item>Spinner Item Nine</item>
-    <item>Spinner Item Ten</item>
+    <item>2</item>
+    <item>3</item>
+    <item>4</item>
+    <item>5</item>
+    <item>6</item>
+    <item>7</item>
+    <item>8</item>
+    <item>9</item>
+    <item>10</item>
 </string-array>
 
 
 
-<string name="SELECTQTY">SelectQTY</string>
 <string-array name="SelectQty">
 
 <item> One</item>
@@ -95,14 +94,12 @@
 </string-array>
 
     <string name="Name">Simple Payment options</string>
+    <string name="dash">-----</string>
+    <string name="payment_option">Payment Option</string>
+    <string name="quantity">Quantity</string>
     <string-array name="SelectPaymentMOde">
-        <item> Google Pay</item>
-        <item> Paytm</item>
-        <item> Rasor Pay</item>
-        <item>NetBanking</item>
-
-
-
+        <item>Pay Online</item>
+        <item>Cash on Delivery (COD)</item>
     </string-array>
 </resources>
 

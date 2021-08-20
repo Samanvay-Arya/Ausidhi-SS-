@@ -141,21 +141,57 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="UnusedAttribute" />
 
-    <Button
-        android:id="@+id/button_verify_Email"
-        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="25dp"
+        android:layout_marginHorizontal="25dp"
         android:layout_marginTop="390dp"
-        android:background="@drawable/custom_button_2"
-        android:clickable="true"
-        android:focusable="true"
-        android:text="Verify Your Email"
-        android:visibility="gone"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        >
+
+
+        <Button
+            android:id="@+id/button_verify_Email"
+            style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1.2"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="@drawable/custom_button"
+            android:layout_marginHorizontal="10dp"
+            app:autoSizeTextType="uniform"
+            app:autoSizeMaxTextSize="18sp"
+            app:autoSizeMinTextSize="8sp"
+            android:visibility="gone"
+            android:textColor="@color/black"
+            android:textStyle="bold|italic"
+            android:text="Verify Your Email"
+            />
+
+        <Button
+            android:id="@+id/SignIn_With_Email_Verified_Login"
+            android:layout_width="0dp"
+            style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon"
+            android:layout_weight="0.8"
+            android:layout_height="50dp"
+            android:background="@drawable/custom_button"
+            android:gravity="center"
+            android:text="Login"
+            android:layout_marginHorizontal="10dp"
+            app:autoSizeTextType="uniform"
+            app:autoSizeMaxTextSize="18sp"
+            app:autoSizeMinTextSize="8sp"
+            android:visibility="gone"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            />
+
+    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

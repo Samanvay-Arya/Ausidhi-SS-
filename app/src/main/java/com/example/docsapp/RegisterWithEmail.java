@@ -33,7 +33,7 @@ public class RegisterWithEmail extends AppCompatActivity {
     EditText Email;
     EditText Password;
     EditText Referral;
-    Button Register,verify;
+    Button Register,verify,verifiedLogin;
     Button AlreadyRegistered;
     String Email_string;
     String Password_string;
@@ -52,6 +52,7 @@ public class RegisterWithEmail extends AppCompatActivity {
         Referral=findViewById(R.id.Referral_Code);
         progressBar=findViewById(R.id.progressBar_Register_With_Email);
         Register=findViewById(R.id.Register_Button_register);
+        verifiedLogin=findViewById(R.id.SignIn_With_Email_Verified_Login);
         AlreadyRegistered=findViewById(R.id.Already_Registered_TextView);
         verify=findViewById(R.id.button_verify_Email);
         Auth= FirebaseAuth.getInstance();
@@ -97,6 +98,7 @@ public class RegisterWithEmail extends AppCompatActivity {
                                 Toast.makeText(RegisterWithEmail.this, "Successfully registered on AUSIDHI", Toast.LENGTH_SHORT).show();
                                 progressBar.setVisibility(View.GONE);
                                 verify.setVisibility(View.VISIBLE);
+                                verifiedLogin.setVisibility(View.VISIBLE);
 
                             }
                             else{
@@ -120,6 +122,7 @@ public class RegisterWithEmail extends AppCompatActivity {
                         public void onSuccess(@NonNull Void aVoid) {
                             Toast.makeText(RegisterWithEmail.this, "Verification Link has been sent to your Email" +
                                     "check your Email Inbox", Toast.LENGTH_SHORT).show();
+                            verify.setVisibility(View.GONE);
                         }
                     }).addOnFailureListener(new OnFailureListener() {
                         @Override
@@ -131,15 +134,20 @@ public class RegisterWithEmail extends AppCompatActivity {
 
                 }
             });
-        FirebaseUser currentUser=Auth.getCurrentUser();
-            if (currentUser!=null && currentUser.isEmailVerified()){
-                Intent i= new Intent(RegisterWithEmail.this,Login_2.class);
-                startActivity(i);
-                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                startActivity(intent);
-                finish();
+
+        verifiedLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                    Intent i= new Intent(RegisterWithEmail.this,Login_2.class);
+                    startActivity(i);
+                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    startActivity(intent);
+                    finish();
+
             }
+        });
+
 
 
         AlreadyRegistered.setOnClickListener(new View.OnClickListener() {
