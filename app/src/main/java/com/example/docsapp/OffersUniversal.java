@@ -4,6 +4,7 @@ package com.example.docsapp;
         import androidx.annotation.Nullable;
         import androidx.appcompat.app.AppCompatActivity;
         import androidx.recyclerview.widget.GridLayoutManager;
+        import androidx.recyclerview.widget.LinearLayoutManager;
         import androidx.recyclerview.widget.RecyclerView;
 
         import android.content.Intent;
@@ -50,6 +51,7 @@ public class OffersUniversal extends AppCompatActivity {
     String Offer;
     String s,DefaultImageURL,TabularImageURL;
     ImageView DefaultImage,TabularImage;
+    FAQAdapter Adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -118,8 +120,6 @@ public class OffersUniversal extends AppCompatActivity {
                 if (Offer != null) {
 
 
-
-
                     Glide.with(getApplicationContext()).load(DefaultImageURL).
                             listener(new RequestListener<Drawable>() {
                                 @Override
@@ -136,10 +136,23 @@ public class OffersUniversal extends AppCompatActivity {
                             })
                             .into(DefaultImage);
                     Glide.with(getApplicationContext()).load(TabularImageURL).into(TabularImage);
+
+                    FirebaseRecyclerOptions<faqmodel> FAQ_options =
+                            new FirebaseRecyclerOptions.Builder<faqmodel>()
+                                    .setQuery(FirebaseDatabase.getInstance().getReference().child("Fragment_Home").child("Slider_Home").child(Offer).child("FAQ"), faqmodel.class)
+                                    .build();
+
+
+                    Adapter = new FAQAdapter(FAQ_options);
+                    FAQs.setLayoutManager(new LinearLayoutManager(OffersUniversal.this));
+                    FAQs.setAdapter(Adapter);
+                    Adapter.startListening();
+
                     FirebaseRecyclerOptions<GadgetsCategoryModel> options =
                             new FirebaseRecyclerOptions.Builder<GadgetsCategoryModel>()
                                     .setQuery(FirebaseDatabase.getInstance().getReference().child("Fragment_Home").child("Slider_Home").child(Offer).child("Category"), GadgetsCategoryModel.class)
                                     .build();
+
 
                     adapter = new GadgetsCategoryGridAdapter(options);
                     layoutManager = new GridLayoutManager(OffersUniversal.this, 2);

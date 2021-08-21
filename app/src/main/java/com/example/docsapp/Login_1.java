@@ -59,7 +59,7 @@ public class Login_1 extends AppCompatActivity {
     ImageButton next;
     Integer RC_SIGN_IN=1;
     Button GoogleSignIN;
-    GoogleSignInClient GoogleSignInClient;
+    GoogleSignInClient mGoogleSignInClient;
     CountryCodePicker countryCodePicker;
     EditText EditTextPhoneNumber;
     FirebaseAuth Auth;
@@ -69,8 +69,6 @@ public class Login_1 extends AppCompatActivity {
     String Email;
     String UserPhoneNumber;
     Button Email_SignIn;
-    CheckBox checkBox;
-    GoogleApiClient googleApiClient;
     TextView TVTimer;
     int timer=60;
     ProgressBar progressBar;
@@ -86,12 +84,13 @@ public class Login_1 extends AppCompatActivity {
         countryCodePicker=findViewById(R.id.country_code);
         countryCodePicker.registerCarrierNumberEditText(EditTextPhoneNumber);
         GoogleSignIN=findViewById(R.id.signIn_with_Google);
-        Auth=FirebaseAuth.getInstance();
+
         OTP=findViewById(R.id.editTextOTP);
         GetOTP=findViewById(R.id.Get_OTP_button);
         TVTimer=findViewById(R.id.Login_WIth_Phone_Timer);
         progressBar=findViewById(R.id.Progress_Bar_Login_With_Phone);
         createRequest();
+        Auth=FirebaseAuth.getInstance();
         Email_SignIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -163,16 +162,14 @@ public class Login_1 extends AppCompatActivity {
 
     private void createRequest() {
         // Configure Google Sign In
-        GoogleSignInOptions gso = new GoogleSignInOptions
-                .Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-//                .requestIdToken(getString(R.string.default_web_client_id))
-
+        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                .requestIdToken(getString(R.string.default_web_client_id))
                 .requestEmail()
                 .build();
-        GoogleSignInClient = GoogleSignIn.getClient(this, gso);
+        mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
     }
     private void signInWithGoogle() {
-        Intent signInIntent = GoogleSignInClient.getSignInIntent();
+        Intent signInIntent = mGoogleSignInClient.getSignInIntent();
         startActivityForResult(signInIntent, RC_SIGN_IN);
     }
     @Override
